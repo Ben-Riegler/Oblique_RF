@@ -11,7 +11,8 @@ def pso(f, n, S = 20, lo = -1, up = 1, its = 20, conv_lim = 5, alf = 0.9, cc = 4
 
 
     
-    """Input:  
+    """
+    Input:  
                 f: real valued function to minimize, 
                 n: the dimension of the search space,
                 S: the swarm size, 
@@ -24,9 +25,12 @@ def pso(f, n, S = 20, lo = -1, up = 1, its = 20, conv_lim = 5, alf = 0.9, cc = 4
                 sc: social coefficient
                                                                      
         Output: 
-                found minmum, number of interations
+                found minmum
+                number of PSO interations
+                number of computational operations
                 
-                                                    """
+                                                    
+    """
     
     #initialize particles randomly 
     # a dictionary of particles, keys: 0,...,S-1 and values: random array of size n
@@ -52,9 +56,6 @@ def pso(f, n, S = 20, lo = -1, up = 1, its = 20, conv_lim = 5, alf = 0.9, cc = 4
     #initialize current global best randomly
     glob = np.random.uniform(lo,up,n)
     
-    # set range for APSO
-    a_min = 0.6
-    a_max = 0.99
 
     # initialize iteration and no global improvment counters 
     count = 0
