@@ -12,7 +12,7 @@ def pso(f, n, S = 20, lo = -1, up = 1, its = 20, conv_lim = 5, alf = 0.9, cc = 4
 
     
     """
-    Input:  
+        Input:  
                 f: real valued function to minimize, 
                 n: the dimension of the search space,
                 S: the swarm size, 
@@ -27,9 +27,7 @@ def pso(f, n, S = 20, lo = -1, up = 1, its = 20, conv_lim = 5, alf = 0.9, cc = 4
         Output: 
                 found minmum
                 number of PSO interations
-                number of computational operations
-                
-                                                    
+                number of computational operations                                               
     """
     
     #initialize particles randomly 
