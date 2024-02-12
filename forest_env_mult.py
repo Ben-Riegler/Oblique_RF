@@ -103,14 +103,16 @@ def gini(data, coeffs, thr):
     
     n = len(data)
     
-    """Inputs:
+    """
+        Inputs:
                 data: a 2D array, first column the target of 0/1s
                 coeffs: the coefficients of the hyperplane
                 thr: the threshold/ RHS of the hyperplane
                                                             
         Output:
                 Gini impurity at node
-                                                            """
+                                                                        
+    """
                 
     
     # split into target column and feature matrix
@@ -885,7 +887,7 @@ class forest:
     def grow(self, size = 10, m = None, max_depth = None, imbal = 0.5, lim = 30, min_size = None, oblique = True, S = 20):
 
         """
-        Create tree objects grown on bootstrapped data sets and store them in class attribute self.trees.
+        Create tree objects grown on bootstrapped data sets and store them in class attribute self.trees
 
         Inputs 
                 size: int, number of trees to grow
@@ -999,11 +1001,13 @@ class forest:
     
     def plot(self):
 
-        """ For 2D features only!
+        """ 
+            For 2D features only!
             Plots all training data.
 
             For binary target.
-            """
+        """
+
 
         # prepare and plot training data
         y,X = np.hsplit(self.data_train,[1])
